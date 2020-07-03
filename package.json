@@ -1,0 +1,25 @@
+{
+  "name": "precisebar",
+  "version": "1.0.0",
+  "description": "An extremely precise progress bar",
+  "main": "index.js",
+  "repository": "https://github.com/ameliabradley/preciseprogress",
+  "author": "Amelia",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha *.spec.js"
+  },
+  "keywords": [
+    "progress",
+    "progressbar",
+    "precise",
+    "gantt"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1",
+    "prettier": "^2.0.5"
+  }
+}
