@@ -10,18 +10,18 @@ describe("Test bar results", () => {
   it("getProgress should return the correct progress bar", () => {
     assert.equal(
       bar.getProgress(0.8, 10),
-      "\u001b[38;2;255;255;255m\u001b[48;2;128;128;128m████████\u001b[49m\u001b[39m\u001b[38;2;128;128;128m██\u001b[39m"
+      "\x1B[38;2;255;255;255m\x1B[48;2;128;128;128m████████  \x1B[49m\x1B[39m"
     );
     assert.equal(
       bar.getProgress(0.3, 15),
-      "\u001b[38;2;255;255;255m\u001b[48;2;128;128;128m████▌\u001b[49m\u001b[39m\u001b[38;2;128;128;128m██████████\u001b[39m"
+      "\x1B[38;2;255;255;255m\x1B[48;2;128;128;128m████▌          \x1B[49m\x1B[39m"
     );
   });
 
   it("getProgress should pass colors to chalk", () => {
     assert.equal(
       bar.getProgress(0.8, 10, "red", "blue"),
-      "\u001b[38;2;255;0;0m\u001b[48;2;0;0;255m████████\u001b[49m\u001b[39m\u001b[38;2;0;0;255m██\u001b[39m"
+      "\x1B[38;2;255;0;0m\x1B[48;2;0;0;255m████████  \x1B[49m\x1B[39m"
     );
   });
 });
