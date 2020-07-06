@@ -25,6 +25,7 @@ function colorize(bar, fg, bg) {
     if (bg) colorized = colorized.bgKeyword(bg);
     return colorized(bar);
   }
+  return bar;
 }
 
 /**
