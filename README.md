@@ -1,8 +1,8 @@
 [![Dependencies][deps-image]][deps-url] [![star this repo][gh-stars-image]][gh-url] [![fork this repo][gh-forks-image]][gh-url] [![Build Status][travis-image]][travis-url]
 
-**precisebar** is a low-level precise text-based progress bar.
+**precisebar** is a low-level precise text-based progress bar for use in command-line applications.
 
-![Screenshot](https://github.com/ameliabradley/precisebar/raw/master/precisebar-demo.webp)
+<img src="https://github.com/ameliabradley/precisebar/raw/master/showoff2.gif" alt="demo" width="439"/>
 
 Where most text-based progress bars use ascii characters, precisebar takes advantage of widespread unicode support to render sub-character lengths.
 
