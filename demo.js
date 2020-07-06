@@ -11,7 +11,7 @@ const demoTotalTime = demoSpeed * (1 / progressSpeed);
 function getAsciiProgress(value, length) {
     let chars = Math.ceil(value * length);
     if (chars > length) chars = length;
-    return "=".repeat(chars) + " ".repeat(length - chars);
+    return "🥱 " + "=".repeat(chars) + " ".repeat(length - chars);
 }
 
 var easeInOutQuad = function (x, t, b, c, d) {
@@ -19,8 +19,7 @@ var easeInOutQuad = function (x, t, b, c, d) {
     return -c/2 * ((--t)*(t-2) - 1) + b;
 };
 
-function printProgress(progress, length, fn){
-    process.stdout.clearLine();
+function printProgress(progress, fn){
     process.stdout.cursorTo(0);
     process.stdout.write(`${fn(progress)}   `);
 }
@@ -34,7 +33,7 @@ function runDemo(fn) {
             time += demoSpeed;
 
             let done = easeInOutQuad(progress, time, 0, 1, demoTotalTime);
-            printProgress(done, 40, fn);
+            printProgress(done, fn);
 
             if (progress >= 1) {
                 clearInterval(interval);
@@ -48,7 +47,7 @@ runDemo(progress => {
     return getAsciiProgress(progress, totalCharWidth);
 }).then(() => {
     return runDemo(progress => {
-        return bar.getProgress(progress, totalCharWidth, "cyan");
+        return "🦄 " + bar.getProgress(progress, totalCharWidth, "hotpink", "ghostwhite");
     });
 }).then(() => {
     console.log('\n\nDONE');
