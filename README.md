@@ -23,8 +23,8 @@ Where most text-based progress bars use ascii characters, precisebar takes advan
 
 ```javascript
 const bar = require("precisebar");
-const progress = 0.3;
-const charWidth = 15;
+const progress = 0.3; // Any number 0-1
+const charWidth = 15; // Any integer value
 console.log(bar.getProgress(progress, charWidth));
 ```
 
@@ -34,10 +34,50 @@ console.log(bar.getProgress(progress, charWidth));
 const bar = require("precisebar");
 const progress = 0.3;
 const charWidth = 15;
-const foreground = "cyan";
-const background = "grey";
-console.log(bar.getProgress(progress, charWidth, foreground, background));
+const beginningColor = "cyan";
+const endColor = "bgGrey";
+console.log(bar.getProgress(progress, charWidth, beginningColor, endColor));
 ```
+
+**Valid beginning colors:**
+
+* black
+* red
+* green
+* yellow
+* blue
+* magenta
+* cyan
+* white
+* blackBright (alias: gray, grey)
+* redBright
+* greenBright
+* yellowBright
+* blueBright
+* magentaBright
+* cyanBright
+* whiteBright
+* Any RGB array (ex: [255, 105, 180])
+
+**Valid end colors:**
+
+* bgBlack
+* bgRed
+* bgGreen
+* bgYellow
+* bgBlue
+* bgMagenta
+* bgCyan
+* bgWhite
+* bgBlackBright (alias: bgGray, bgGrey)
+* bgRedBright
+* bgGreenBright
+* bgYellowBright
+* bgBlueBright
+* bgMagentaBright
+* bgCyanBright
+* bgWhiteBright
+* Any RGB array (ex: [248, 248, 255])
 
 ## License
 

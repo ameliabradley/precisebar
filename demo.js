@@ -47,7 +47,7 @@ runDemo(progress => {
     return getAsciiProgress(progress, totalCharWidth);
 }).then(() => {
     return runDemo(progress => {
-        return "🦄 " + bar.getProgress(progress, totalCharWidth, "hotpink", "ghostwhite");
+        return "🦄 " + bar.getProgress(progress, totalCharWidth, [255, 105, 180], [248,248,255]);
     });
 }).then(() => {
     console.log('\n\nDONE');
