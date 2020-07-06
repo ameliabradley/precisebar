@@ -21,8 +21,10 @@ function getBlocks(value, length = 40) {
 function colorize(bar, fg, bg) {
   if (fg || bg) {
     let colorized = chalk;
-    if (fg) colorized = colorized.keyword(fg);
-    if (bg) colorized = colorized.bgKeyword(bg);
+    if (typeof fg === "string") colorized = colorized[fg];
+    if (typeof fg === "object") colorized = colorized.rgb(fg[0], fg[1], fg[2]);
+    if (typeof bg === "string") colorized = colorized[bg];
+    if (typeof bg === "object") colorized = colorized.bgRgb(bg[0], bg[1], bg[2]);
     return colorized(bar);
   }
   return bar;
@@ -42,7 +44,7 @@ function getProgress(
   value,
   length = 40,
   colorBegin = "white",
-  colorEnd = "grey"
+  colorEnd = "bgGrey"
 ) {
   const first = getBlocks(value, length, colorBegin, colorEnd);
   const last = " ".repeat(length - first.length);
