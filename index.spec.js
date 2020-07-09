@@ -1,7 +1,14 @@
 const bar = require("./index");
 const assert = require("assert");
+const chalk = require("chalk");
 
 describe("Test bar results", () => {
+  // 0	All colors disabled
+  // 1	Basic color support (16 colors)
+  // 2	256 color support
+  // 3	Truecolor support (16 million colors)
+  chalk.level = 1;
+
   it("getBlocks should return the correct blocks", () => {
     assert.equal(bar.getBlocks(0.8, 10), "█".repeat(8));
     assert.equal(bar.getBlocks(0.1, 3), "▎");
