@@ -1,4 +1,4 @@
-[![Dependencies][deps-image]][deps-url] [![star this repo][gh-stars-image]][gh-url] [![fork this repo][gh-forks-image]][gh-url] [![Build Status][travis-image]][travis-url]
+[![Dependencies][deps-image]][deps-url] [![star this repo][gh-stars-image]][gh-url] [![fork this repo][gh-forks-image]][gh-url] [![Node.js CI][workflow-image]][workflow-url]
 
 **precisebar** is a low-level precise text-based progress bar for use in command-line applications.
 
@@ -90,5 +90,5 @@ MIT © 2020 [Amelia](https://github.com/ameliabradley)
 [gh-stars-image]: https://badgen.net/github/stars/ameliabradley/precisebar
 [gh-forks-image]: https://badgen.net/github/forks/ameliabradley/precisebar
 
-[travis-url]: https://travis-ci.com/ameliabradley/precisebar
-[travis-image]: https://travis-ci.com/ameliabradley/precisebar.svg?branch=master
+[workflow-url]: https://github.com/ameliabradley/precisebar/actions?query=workflow%3A%22Node.js+CI%22+branch%3Amaster
+[workflow-image]: https://github.com/ameliabradley/precisebar/workflows/Node.js%20CI/badge.svg
