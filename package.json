@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/leebradley/precisebar",
   "author": "Lee Bradley",
-  "license": "MIT",
+  "license": "BlueOak-1.0.0",
   "scripts": {
     "test": "mocha *.spec.js"
   },
