@@ -81,7 +81,7 @@ console.log(bar.getProgress(progress, charWidth, beginningColor, endColor));
 
 ## License
 
-MIT © 2020 [Lee Bradley](https://github.com/leebradley)
+Blue Oak License v1.0.0 - A modern [alternative](https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html) to the MIT License.
 
 [deps-url]: https://david-dm.org/leebradley/precisebar
 [deps-image]: https://badgen.net/david/dep/leebradley/precisebar
